@@ -166,3 +166,37 @@ const List dataCategory = [
     'imageUrl': 'assets/image_home_category/bathroom.png',
   },
 ];
+
+const List dataPopularProduct = [
+  {
+    'title':
+        "Wooden bedside table featuring a raised desi Wooden bedside table featuring a raised desi",
+    'imageUrl': "assets/image_home_popular/1.png",
+    'price': "\$150.00",
+    'liked': true,
+    'newProduct': true,
+  },
+  {
+    'title':
+        "Chair made of ash wood sourced from responsib Chair made of ash wood sourced from responsib",
+    'imageUrl': "assets/image_home_popular/2.png",
+    'price': "\$149.99",
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title':
+        "Square bedside table with legs, a rattan shelf and a Square bedside table with legs, a rattan shelf and a ",
+    'imageUrl': "assets/image_home_popular/3.png",
+    'price': "\$140.25",
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title': "Dark wood side board with a faceted drawer",
+    'imageUrl': "assets/image_home_popular/4.png",
+    'price': "\$450.00",
+    'liked': true,
+    'newProduct': true,
+  },
+];
