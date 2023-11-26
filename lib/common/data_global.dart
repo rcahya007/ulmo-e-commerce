@@ -172,7 +172,7 @@ const List dataPopularProduct = [
     'title':
         "Wooden bedside table featuring a raised desi Wooden bedside table featuring a raised desi",
     'imageUrl': "assets/image_home_popular/1.png",
-    'price': "\$150.00",
+    'price': 150000,
     'liked': true,
     'newProduct': true,
   },
@@ -180,7 +180,7 @@ const List dataPopularProduct = [
     'title':
         "Chair made of ash wood sourced from responsib Chair made of ash wood sourced from responsib",
     'imageUrl': "assets/image_home_popular/2.png",
-    'price': "\$149.99",
+    'price': 150000,
     'liked': false,
     'newProduct': false,
   },
@@ -188,15 +188,89 @@ const List dataPopularProduct = [
     'title':
         "Square bedside table with legs, a rattan shelf and a Square bedside table with legs, a rattan shelf and a ",
     'imageUrl': "assets/image_home_popular/3.png",
-    'price': "\$140.25",
+    'price': 150000,
     'liked': false,
     'newProduct': false,
   },
   {
     'title': "Dark wood side board with a faceted drawer",
     'imageUrl': "assets/image_home_popular/4.png",
-    'price': "\$450.00",
+    'price': 150000,
     'liked': true,
     'newProduct': true,
+  },
+  {
+    'title':
+        "Wooden bedside table featuring a raised desi Wooden bedside table featuring a raised desi",
+    'imageUrl': "assets/image_home_popular/1.png",
+    'price': 150000,
+    'liked': true,
+    'newProduct': true,
+  },
+  {
+    'title':
+        "Chair made of ash wood sourced from responsib Chair made of ash wood sourced from responsib",
+    'imageUrl': "assets/image_home_popular/2.png",
+    'price': 150000,
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title':
+        "Square bedside table with legs, a rattan shelf and a Square bedside table with legs, a rattan shelf and a ",
+    'imageUrl': "assets/image_home_popular/3.png",
+    'price': 150000,
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title': "Dark wood side board with a faceted drawer",
+    'imageUrl': "assets/image_home_popular/4.png",
+    'price': 150000,
+    'liked': true,
+    'newProduct': true,
+  },
+];
+
+const List dataLivingRoomCategories = [
+  {
+    'title': "Furniture",
+    'imageUrl': "assets/image_livingRoom_categories/furniture.png"
+  },
+  {
+    'title': "Lighting",
+    'imageUrl': "assets/image_livingRoom_categories/lighting.png"
+  },
+  {
+    'title': "Rugs",
+    'imageUrl': "assets/image_livingRoom_categories/rugs.png",
+  },
+  {
+    'title': "Mirrors",
+    'imageUrl': "assets/image_livingRoom_categories/mirrors.png"
+  },
+  {
+    'title': "Blankets",
+    'imageUrl': "assets/image_livingRoom_categories/blankets.png"
+  },
+  {
+    'title': "Cushions",
+    'imageUrl': "assets/image_livingRoom_categories/cushions.png"
+  },
+  {
+    'title': "Curtains",
+    'imageUrl': "assets/image_livingRoom_categories/curtains.png"
+  },
+  {
+    'title': "Baskets",
+    'imageUrl': "assets/image_livingRoom_categories/baskets.png"
+  },
+  {
+    'title': "Vases",
+    'imageUrl': "assets/image_livingRoom_categories/vases.png"
+  },
+  {
+    'title': "Boxes",
+    'imageUrl': "assets/image_livingRoom_categories/boxes.png"
   },
 ];

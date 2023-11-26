@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ulmo_ecommerce/common/convert_currency.dart';
 import 'package:ulmo_ecommerce/common/data_global.dart';
 
 class PopularCard extends StatelessWidget {
@@ -22,7 +23,7 @@ class PopularCard extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(16),
           child: GridView.builder(
-            itemCount: 20,
+            itemCount: dataPopularProduct.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 15,
@@ -36,7 +37,6 @@ class PopularCard extends StatelessWidget {
                 width: 164,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: colorGreen500,
                 ),
                 child: Column(
                   children: [
@@ -46,29 +46,36 @@ class PopularCard extends StatelessWidget {
                           height: 200,
                           width: double.infinity,
                           decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                dataPopularProduct[index]['imageUrl'],
+                              ),
+                              fit: BoxFit.fill,
+                            ),
                             borderRadius: BorderRadius.circular(8),
-                            color: colorIndigo500,
                           ),
                         ),
                         Positioned(
                           top: 8,
                           left: 8,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8,
-                              vertical: 2,
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                4,
-                              ),
-                              color: colorYellow400,
-                            ),
-                            child: Text(
-                              'new',
-                              style: body2med,
-                            ),
-                          ),
+                          child: dataPopularProduct[index]['liked'] == true
+                              ? Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 2,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(
+                                      4,
+                                    ),
+                                    color: colorYellow400,
+                                  ),
+                                  child: Text(
+                                    'new',
+                                    style: body2med,
+                                  ),
+                                )
+                              : const SizedBox(),
                         ),
                       ],
                     ),
@@ -79,22 +86,29 @@ class PopularCard extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            '\$150.00',
+                            CurrencyFormat.convertToIdr(
+                                dataPopularProduct[index]['price'], 0),
                             style: body1med,
                           ),
                         ),
-                        SvgPicture.asset(
-                          "assets/icons/like_filled.svg",
-                          width: 20,
-                          height: 18,
-                        ),
+                        dataPopularProduct[index]['liked'] == true
+                            ? SvgPicture.asset(
+                                "assets/icons/like_filled.svg",
+                                width: 20,
+                                height: 18,
+                              )
+                            : SvgPicture.asset(
+                                "assets/icons/like_no_filled.svg",
+                                width: 20,
+                                height: 18,
+                              ),
                       ],
                     ),
                     const SizedBox(
                       height: 4,
                     ),
                     Text(
-                      'Wooden bedside table featuring a raised Wooden bedside table featuring a raised',
+                      dataPopularProduct[index]['title'],
                       style: body3reg,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
