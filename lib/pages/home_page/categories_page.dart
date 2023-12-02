@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:ulmo_ecommerce/common/data_global.dart';
+import 'package:ulmo_ecommerce/pages/home_page/products_by_categories_page.dart';
 import 'package:ulmo_ecommerce/widgets/search_custom.dart';
+import 'package:ulmo_ecommerce/widgets/title_section.dart';
 
 class CategoriesPage extends StatelessWidget {
   String? titleCategory;
@@ -37,46 +39,54 @@ class CategoriesPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SearchCustom(),
-            Container(
+            TitleSection(
+              title: 'categories',
               padding: const EdgeInsets.all(
                 16,
               ),
-              child: Text(
-                'categories',
-                style: heading2semi,
-              ),
+              textStyle: heading2semi,
             ),
             Column(
               children: dataCategory!.map((e) {
                 Map data = e as Map;
-                return Container(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 16,
-                    horizontal: 14,
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 36,
-                        width: 36,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage(
-                              data['imageUrl'],
+                return GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            ProductsByCategories(title: data['title']),
+                      )),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 16,
+                      horizontal: 14,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 36,
+                          width: 36,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                data['imageUrl'],
+                              ),
+                              fit: BoxFit.fill,
                             ),
-                            fit: BoxFit.fill,
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Text(
-                        data['title'],
-                        style: body1reg,
-                      )
-                    ],
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Expanded(
+                          child: Text(
+                            data['title'],
+                            style: body1reg,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 );
               }).toList(),

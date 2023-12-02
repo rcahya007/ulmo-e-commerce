@@ -167,12 +167,12 @@ const List dataCategory = [
   },
 ];
 
-const List dataPopularProduct = [
+const List dataProduct = [
   {
     'title':
         "Wooden bedside table featuring a raised desi Wooden bedside table featuring a raised desi",
     'imageUrl': "assets/image_home_popular/1.png",
-    'price': 150000,
+    'price': 1000000,
     'liked': true,
     'newProduct': true,
   },
@@ -180,7 +180,7 @@ const List dataPopularProduct = [
     'title':
         "Chair made of ash wood sourced from responsib Chair made of ash wood sourced from responsib",
     'imageUrl': "assets/image_home_popular/2.png",
-    'price': 150000,
+    'price': 2500000,
     'liked': false,
     'newProduct': false,
   },
@@ -226,7 +226,69 @@ const List dataPopularProduct = [
   {
     'title': "Dark wood side board with a faceted drawer",
     'imageUrl': "assets/image_home_popular/4.png",
+    'price': 30000000,
+    'liked': true,
+    'newProduct': true,
+  },
+  {
+    'title':
+        "Wooden bedside table featuring a raised desi Wooden bedside table featuring a raised desi",
+    'imageUrl': "assets/image_home_popular/1.png",
+    'price': 1000000,
+    'liked': true,
+    'newProduct': true,
+  },
+  {
+    'title':
+        "Chair made of ash wood sourced from responsib Chair made of ash wood sourced from responsib",
+    'imageUrl': "assets/image_home_popular/2.png",
+    'price': 2500000,
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title':
+        "Square bedside table with legs, a rattan shelf and a Square bedside table with legs, a rattan shelf and a ",
+    'imageUrl': "assets/image_home_popular/3.png",
     'price': 150000,
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title': "Dark wood side board with a faceted drawer",
+    'imageUrl': "assets/image_home_popular/4.png",
+    'price': 150000,
+    'liked': true,
+    'newProduct': true,
+  },
+  {
+    'title':
+        "Wooden bedside table featuring a raised desi Wooden bedside table featuring a raised desi",
+    'imageUrl': "assets/image_home_popular/1.png",
+    'price': 150000,
+    'liked': true,
+    'newProduct': true,
+  },
+  {
+    'title':
+        "Chair made of ash wood sourced from responsib Chair made of ash wood sourced from responsib",
+    'imageUrl': "assets/image_home_popular/2.png",
+    'price': 150000,
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title':
+        "Square bedside table with legs, a rattan shelf and a Square bedside table with legs, a rattan shelf and a ",
+    'imageUrl': "assets/image_home_popular/3.png",
+    'price': 150000,
+    'liked': false,
+    'newProduct': false,
+  },
+  {
+    'title': "Dark wood side board with a faceted drawer",
+    'imageUrl': "assets/image_home_popular/4.png",
+    'price': 30000000,
     'liked': true,
     'newProduct': true,
   },
